@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html manifest="SALT.manifest"><head>
+<title>Madajstores for PS4 9.00 FW</title>
+<link rel="stylesheet prefetch" href="Style.css">
+<style>
+html, body {
+//background-image: url('1.jpg');
+background-size: 100%;
+background-repeat: no-repeat;
+//background-color: #24272b;
+color: black;
+text-align: center;
+margin: 0px;
+overflow: hidden;
+}
+  .themes {
+   width:98%;
+   margin:0 auto;
+   margin-left:2%;
+   margin-top:2%;
+  }
+  .theme {
+    background:rgba(0,0,0,0.75);
+    width:14.1%;
+    text-align:center;
+    display:inline-block;
+    margin-right:2.5%;
+    margin-bottom:2.5%;
+  }
+  .theme img {
+    width:100%;
+  }
+  .theme span  {
+   color:white;
+   display:block;
+   padding:10px;
+  }
+        button {
+                    background-color:white;
+                    border: 2px solid black;
+                    border-radius: 10px;
+                    text-align: center;
+        }
+        button:hover {
+                    box-shadow: 0 5px 50px 0 black;
+                    color: black;
+                    border-radius: 10px;
+        }
+h1 {
+text-shadow: 0.1em 0.1em 0.2em black;
+font-size: 25px;
+text-align: center;
+color: green;
+}
+.btn {
+background-color: #003263;
+color: green;
+width: 260px;
+height: 49px;
+padding-bottom: 5px;
+text-align: center;
+font-size: 20px;
+margin-top: 8px;
+margin-bottom: 8px;
+margin-left: 8px;
+margin-right: 8px;
+border-bottom-width: 0px;
+border-right-width: 0px;
+border-top-width: 0px;
+border-left-width: 0px;
+transition-duration: 0.4s;
+cursor: pointer;
+border-radius: 8px;
+}
+.btn:hover {
+background-color: #0058b1;
+}
+.btn-toolbox {
+background-color: #ae2301;
+}
+.btn-toolbox:hover {
+background-color: #d42a01;
+}
+</style>
+<script>
+function DLProgress(e){
+	parent.ScrOverlay.style.display="block";
+	Percent=(Math.round(e.loaded / e.total * 100));
+	parent.cacheUPDtxt.innerHTML="Installing Offline Cache: " + Percent + "%";
+	parent.CacheBar.style.width=Percent + '%';
+}
+function DisplayCacheProgress(){
+	setTimeout(function(){parent.cacheUPDtxt.innerHTML="Cache Installed Successfully.Turn off Internet & Reopen the Browser!!";},1000);}
+	window.applicationCache.addEventListener("progress",DLProgress,false);
+	window.applicationCache.oncached=function(e){DisplayCacheProgress();};
+	window.applicationCache.onupdateready=function(e){DisplayCacheProgress();};
+	window.applicationCache.onerror=function(e){parent.cacheUPDtxt.innerHTML="Error Installing Cache";
+};
+</script>
+<script src="int64.js"></script>
+<script src="rop.js"></script>
+<script src="kexploit.js"></script>
+<script src="webkit.js"></script>
+</head>
+<body class="bg-darker">
+<div id="container"  style="">
+<div id=ScrOverlay class=cacheUPDbg><pre id=cacheUPDtxt class=cacheUPD></pre>
+<div id=CacheProgress><div id=CacheBar></div></div></div>
+<hr><span id="date" ></span><span id="clock" ></span><h1 style='font-size:25px;text-align:center;color:white;'><h1 id="msgs">Madajstores for PS4 9.00 FW</h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
+<hr>
+<div class="about" ><a href="about.html" >About Us</a></div>
+<div class="about2" ><a href="theme.html" >Themes</a></div>
+<div id="myModal" class="modal">
+  <!-- MODAL CONTENTS -->
+  <div class="modal-content">
+  <span class="close"></span>
+    <div class="modal-body">
+
+    <br><br><br>
+    </div>
+  </div>
+</div>
+<script>
+var modal = document.getElementById("myModal");
+var span = document.getElementsByClassName("close")[0];
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+span.onclick = function() {
+  modal.style.display = "none";
+}
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+<h1 id=msgs2 style='font-size:25px;text-align:center;color: black;'>STATUS</h1><hr>
+<br>
+<div style='font-size:20px;text-align:center;color:#000000;'>GoldHen 2.0</div>
+<button style='font-size:22px;text-align:center;color:white;background-color: goldenrod;' class="pointer" onclick=load_goldhen2() onMouseOver="msgs2.innerHTML='GoldHEN 2.0b by SISTRo [ after sent wait for alert then connect flash drive ]'" ; onmouseout="msgs2.innerHTML='STATUS'" type="button"><B>GoldHen 2.0b </B></button></a>
+<br><br>
+<div style=font-size:20px;text-align:center;color:#000000;>Payloads</div>
+<button style='font-size:20px;text-align:center;color:#4863A0' class="pointer" onclick=load_app2usb() onMouseOver="msgs2.innerHTML='Move installed games to an external USB drive'" ; onmouseout="msgs2.innerHTML='STATUS'" type="button"><B> App2USB </B></button></a>
+<button style='font-size:20px;text-align:center;color:#4863A0' class="pointer" onclick=load_todex() onMouseOver="msgs2.innerHTML='unlocks some debug features available on Devkit'" ; onmouseout="msgs2.innerHTML='STATUS'" type="button"><B> ToDex </B></button></a>
+<button style='font-size:20px;text-align:center;color:#4863A0' class="pointer" onclick=load_webrte() onMouseOver="msgs2.innerHTML='Webrte for mods Game'" ; onmouseout="msgs2.innerHTML='STATUS'" type="button"><B> Webrte </B></button></a>
+<a href="https://night-king.karo218.ir/trainer/index.html"><button style='font-size:20px;text-align:center;color:#4863A0' class="pointer" onMouseOver="msgs2.innerHTML='Loads PS4 Traine Offline'" ; onmouseout="msgs2.innerHTML='STATUS'" type="button"><B> Ps4 trainer </B></button></a>
+<br>
+<a href="binloader.html"><button style='font-size:20px;text-align:center;color:#4863A0' class="pointer" onMouseOver="msgs2.innerHTML='Loads a bin file sent to the PS4 IP address on port 9020'" ; onmouseout="msgs2.innerHTML='STATUS'" type="button"><B> Bin Loader </B></button></a>
+<button style='font-size:20px;text-align:center;color:#4863A0' class="pointer" onclick=load_ps4debug() onMouseOver="msgs2.innerHTML='Ps4 Debugger '" ; onmouseout="msgs2.innerHTML='STATUS'" type="button"><B> Ps4Debug </B></button></a>
+<button style='font-size:20px;text-align:center;color:#4863A0' class="pointer" onclick=load_ftp() onMouseOver="msgs2.innerHTML='A full access FTP server for the PS4'" ; onmouseout="msgs2.innerHTML='STATUS'" type="button"><B> FTP </B></button></a>
+<button style='font-size:20px;text-align:center;color:#4863A0' class="pointer" onclick=load_dumper() onMouseOver="msgs2.innerHTML='Dump Games to a USB drive to be able to create fpkg files'" ; onmouseout="msgs2.innerHTML='STATUS'" type="button"><B> Dumper Game </B></button></a>
+<button style='font-size:20px;text-align:center;color:#4863A0' class="pointer" onclick=load_app2usb() onMouseOver="msgs2.innerHTML='Change clock kernel'" ; onmouseout="msgs2.innerHTML='STATUS'" type="button"><B> Kernel Clock </B></button></a>
+<br>
+<button style='font-size:20px;text-align:center;color:#4863A0' class="pointer" onclick=load_dbackup() onMouseOver="msgs2.innerHTML='Create a backup of important database files ans User Data'" ; onmouseout="msgs2.innerHTML='STATUS'" type="button"><B> DB Backup </B></button></a>
+<button style='font-size:20px;text-align:center;color:#4863A0' class="pointer" onclick=load_dbrestore() onMouseOver="msgs2.innerHTML='Restore a backup of the database files and User Data'" ; onmouseout="msgs2.innerHTML='STATUS'" type="button"><B> DB Restore </B></button></a>
+<button style='font-size:20px;text-align:center;color:#4863A0' class="pointer" onclick=load_historyBlocker() onMouseOver="msgs2.innerHTML='Disable the auto opening of the last page used in the PS4 WebBrowser'" ; onmouseout="msgs2.innerHTML='STATUS'" type="button"><B> History Blocker </B></button></a>
+<button style='font-size:20px;text-align:center;color:#4863A0' class="pointer" onclick=load_disableUpdates() onMouseOver="msgs2.innerHTML='Creates dummy files in the PS4 update folder'" ; onmouseout="msgs2.innerHTML='STATUS'" type="button"><B>Disable Update</B></button></a>
+<button style='font-size:20px;text-align:center;color:#4863A0' class="pointer" onclick=load_enablebUpdates() onMouseOver="msgs2.innerHTML='Removes the dummy files in the PS4 update folder'" ; onmouseout="msgs2.innerHTML='STATUS'" type="button"><B> Enable Update </B></button></a>
+<button style='font-size:20px;text-align:center;color:#4863A0' class="pointer" onclick=load_ebrowser() onMouseOver="msgs2.innerHTML='Enable Browser'" ; onmouseout="msgs2.innerHTML='STATUS'" type="button"><B> Enable Browser </B></button></a>
+<br>
+<div style=font-size:20px;text-align:center;color:#000000;>Mods</div>
+<button style='font-size:20px;text-align:center;color:#4863A0' class="pointer" onclick=load_gtabeef133() onMouseOver="msgs2.innerHTML='Gta V BeefQueef 1.33'" ; onmouseout="msgs2.innerHTML='STATUS'" type="button"><B> Gta V Beef </B></button></a>
+<button style='font-size:20px;text-align:center;color:#4863A0' class="pointer" onclick=load_gta127() onMouseOver="msgs2.innerHTML='Gta V Mods 1.27'" ; onmouseout="msgs2.innerHTML='STATUS'" type="button"><B> GtaV Ar-1.27 </B></button></a>
+<button style='font-size:20px;text-align:center;color:#4863A0' class="pointer" onclick=load_gta132() onMouseOver="msgs2.innerHTML='Gta V Mods 1.32'" ; onmouseout="msgs2.innerHTML='STATUS'" type="button"><B> GtaV Ar-1.32 </B></button></a>
+<button style='font-size:20px;text-align:center;color:#4863A0' class="pointer" onclick=load_gta133() onMouseOver="msgs2.innerHTML='Gta V Mods 1.33'" ; onmouseout="msgs2.innerHTML='STATUS'" type="button"><B> GtaV Ar-1.33 </B></button></a>
+<br>
+<div style=font-size:20px;text-align:center;color:#000000;>Linux</div>
+<button style='font-size:20px;text-align:center;color:#4863A0' class="pointer" onclick=load_linux() onMouseOver="msgs2.innerHTML='Linux Loader'" ; onmouseout="msgs2.innerHTML='STATUS'" type="button"><B> Linux </B></button></a>
+<button style='font-size:20px;text-align:center;color:#4863A0' class="pointer" onclick=load_linux1() onMouseOver="msgs2.innerHTML='Linux Loader-2gb'" ; onmouseout="msgs2.innerHTML='STATUS'" type="button"><B> Linux-2gb </B></button></a>
+<button style='font-size:20px;text-align:center;color:#4863A0' class="pointer" onclick=load_linux2() onMouseOver="msgs2.innerHTML='Linux Loader-3gb'" ; onmouseout="msgs2.innerHTML='STATUS'" type="button"><B> Linux-3gb </B></button></a>
+<button style='font-size:20px;text-align:center;color:#4863A0' class="pointer" onclick=load_linux3() onMouseOver="msgs2.innerHTML='Linux Loader-4gb'" ; onmouseout="msgs2.innerHTML='STATUS'" type="button"><B> Linux-4gb </B></button></a>
+<button style='font-size:20px;text-align:center;color:#4863A0' class="pointer" onclick=load_linux4() onMouseOver="msgs2.innerHTML='Linux Loader-5gb'" ; onmouseout="msgs2.innerHTML='STATUS'" type="button"><B> Linux-5gb </B></button></a>
+<br><br>
+<button style='font-size:20px;text-align:center;color:#4863A0' class="pointer" onclick=load_fanthreshold() onMouseOver="msgs2.innerHTML='Removes the dummy files in the PS4 update folder'" ; onmouseout="msgs2.innerHTML='STATUS'" type="button"><B> Fan 60 &#176;C </B></button></a>
+<br><br>
+	<a style='font-size:25px;text-align:center;color:#000000;'>
+      Main Owner : <a style='font-size:25px;text-align:center;color:black;'>
+          SALT - Find Us In Telegram if you have any kind of issues!&nbsp;<a href="http://t.me/Salt753194" style='font-size:25px;text-align:center;color:red;'>@Salt753194</a> <a style='font-size:25px;text-align:center;color:black;'>And Twitter :&nbsp;<a href="https://twitter.com/salt13939424" style='font-size:25px;text-align:center;color:red;'>@salt13939424</a></h1>
+
+          <br><a style='font-size:25px;text-align:center;color:#000000;'>
+          Madajstores - Phone : 08069040843 &nbsp;
+
+<script>
+function allset() {
+setTimeout(function(){document.location.href = 'index.html';},3000);
+window.msgs.innerHTML="<h1>"+LoadedMSG+"</h1>";
+}
+
+function load_goldhen2(){
+var script = document.createElement('script');script.src = "goldhen.js";document.getElementsByTagName('head')[0].appendChild(script);
+msgs.innerHTML="Loading Jailbreak + GoldHEN v2.0b... Please Wait !!!";
+LoadedMSG="GoldHEN v2.0b Loaded... Press OK Now !!!";
+setTimeout(poc,1500);
+}
+
+function load_gtabeef133(){
+var script = document.createElement('script');script.src = "gtabeef133.js";document.getElementsByTagName('head')[0].appendChild(script);
+msgs.innerHTML="Loading Jailbreak + gtabeef133... Please Wait !!!"
+LoadedMSG="gtabeef133 Loaded... Press OK Now !!!";
+setTimeout(poc,1500);
+}
+
+function load_gta127(){
+var script = document.createElement('script');script.src = "gta127.js";document.getElementsByTagName('head')[0].appendChild(script);
+msgs.innerHTML="Loading Jailbreak + gta V 1.27... Please Wait !!!"
+LoadedMSG="gta V Mods Loaded... Press OK Now !!!";
+setTimeout(poc,1500);
+}
+
+function load_gta132(){
+var script = document.createElement('script');script.src = "gta132.js";document.getElementsByTagName('head')[0].appendChild(script);
+msgs.innerHTML="Loading Jailbreak + gta V 1.32... Please Wait !!!"
+LoadedMSG="gta V Mods Loaded... Press OK Now !!!";
+setTimeout(poc,1500);
+}
+
+function load_gta133(){
+var script = document.createElement('script');script.src = "gta133.js";document.getElementsByTagName('head')[0].appendChild(script);
+msgs.innerHTML="Loading Jailbreak + gta V 1.33... Please Wait !!!"
+LoadedMSG="gta V Mods Loaded... Press OK Now !!!";
+setTimeout(poc,1500);
+}
+
+function load_todex(){
+var script = document.createElement('script');script.src = "todex.js";document.getElementsByTagName('head')[0].appendChild(script);
+msgs.innerHTML="Loading Jailbreak + ToDex... Please Wait !!!"
+LoadedMSG="ToDex Loaded... Press OK Now !!!";
+setTimeout(poc,1500);
+}
+
+function load_webrte(){
+var script = document.createElement('script');script.src = "webrte.js";document.getElementsByTagName('head')[0].appendChild(script);
+msgs.innerHTML="Loading Jailbreak + Webrte... Please Wait !!!"
+LoadedMSG="Webrte Loaded... Press OK Now !!!";
+setTimeout(poc,1500);
+}
+
+function load_ps4debug(){
+var script = document.createElement('script');script.src = "ps4debug.js";document.getElementsByTagName('head')[0].appendChild(script);
+msgs.innerHTML="Loading Jailbreak + Ps4Debug... Please Wait !!!"
+LoadedMSG="Ps4Debug Loaded... Press OK Now !!!";
+setTimeout(poc,1500);
+}
+
+function load_dumper(){
+var script = document.createElement('script');script.src = "dumper.js";document.getElementsByTagName('head')[0].appendChild(script);
+msgs.innerHTML="Loading Jailbreak + Dumper... Please Wait !!!"
+LoadedMSG="Dumper Loaded... Press OK Now !!!";
+setTimeout(poc,1500);
+}
+
+function load_ftp(){
+var script = document.createElement('script');script.src = "ftp.js";document.getElementsByTagName('head')[0].appendChild(script);
+msgs.innerHTML="Loading Jailbreak + FTP... Please Wait !!!"
+LoadedMSG="FTP Loaded... Press OK Now !!!";
+setTimeout(poc,1500);
+}
+
+function load_app2usb(){
+var script = document.createElement('script');script.src = "app2usb.js";document.getElementsByTagName('head')[0].appendChild(script);
+msgs.innerHTML="Loading Jailbreak + App2USB... Please Wait !!!"
+LoadedMSG="App2USB Loaded... Press OK Now !!!";
+setTimeout(poc,1500);
+}
+
+function load_dbackup(){
+var script = document.createElement('script');script.src = "backup.js";document.getElementsByTagName('head')[0].appendChild(script);
+msgs.innerHTML="Loading Jailbreak + DB Backup... Please Wait !!!"
+LoadedMSG="DB Backup Loaded... Press OK Now !!!";
+setTimeout(poc,1500);
+}
+
+function load_dbrestore(){
+var script = document.createElement('script');script.src = "restore.js";document.getElementsByTagName('head')[0].appendChild(script);
+msgs.innerHTML="Loading Jailbreak + DB Restore... Please Wait !!!"
+LoadedMSG="DB Restore Loaded... Press OK Now !!!";
+setTimeout(poc,1500);
+}
+
+function load_enablebUpdates(){
+var script = document.createElement('script');script.src = "enable-updates.js";document.getElementsByTagName('head')[0].appendChild(script);
+msgs.innerHTML="Loading Jailbreak + Enable Updates... Please Wait !!!"
+LoadedMSG="Enable Updates Loaded... Press OK Now !!!";
+setTimeout(poc,1500);
+}
+
+function load_disableUpdates(){
+var script = document.createElement('script');script.src = "disable-updates.js";document.getElementsByTagName('head')[0].appendChild(script);
+msgs.innerHTML="Loading Jailbreak + Disable Updates... Please Wait !!!"
+LoadedMSG="Disable Updates Loaded... Press OK Now !!!";
+setTimeout(poc,1500);
+}
+
+function load_historyBlocker(){
+var script = document.createElement('script');script.src = "history-blocker.js";document.getElementsByTagName('head')[0].appendChild(script);
+msgs.innerHTML="Loading Jailbreak + History Blocker... Please Wait !!!"
+LoadedMSG="History Blocker Loaded... Press OK Now !!!";
+setTimeout(poc,1500);
+}
+
+function load_kernelDump(){
+var script = document.createElement('script');script.src = "kernel-dumper.js";document.getElementsByTagName('head')[0].appendChild(script);
+msgs.innerHTML="Loading Jailbreak + Kernel Dumper... Please Wait !!!"
+LoadedMSG="Kernel Dumper Loaded... Press OK Now !!!";
+setTimeout(poc,1500);
+}
+
+function load_kernelClock(){
+var script = document.createElement('script');script.src = "kernel-clock.js";document.getElementsByTagName('head')[0].appendChild(script);
+msgs.innerHTML="Loading Jailbreak + Kernel Clock... Please Wait !!!"
+LoadedMSG="Kernel Clock Loaded... Press OK Now !!!";
+setTimeout(poc,1500);
+}
+
+function load_moduleDump(){
+var script = document.createElement('script');script.src = "module-dumper.js";document.getElementsByTagName('head')[0].appendChild(script);
+msgs.innerHTML="Loading Jailbreak + Module Dumper... Please Wait !!!"
+LoadedMSG="Module Dumper Loaded... Press OK Now !!!";
+setTimeout(poc,1500);
+}
+
+function load_disbAslr(){
+var script = document.createElement('script');script.src = "disable-aslr.js";document.getElementsByTagName('head')[0].appendChild(script);
+msgs.innerHTML="Loading Jailbreak + Disable ASLR... Please Wait !!!"
+LoadedMSG="Disable ASLR Loaded... Press OK Now !!!";
+setTimeout(poc,1500);
+}
+
+function load_exitidu(){
+var script = document.createElement('script');script.src = "exit-idu.js";document.getElementsByTagName('head')[0].appendChild(script);
+msgs.innerHTML="Loading Jailbreak + Exit IDU... Please Wait !!!"
+LoadedMSG="Exit IDU Loaded... Press OK Now !!!";
+setTimeout(poc,1500);
+}
+
+function load_rifRen(){
+var script = document.createElement('script');script.src = "rif-renamer.js";document.getElementsByTagName('head')[0].appendChild(script);
+msgs.innerHTML="Loading Jailbreak + RIF Renamer... Please Wait !!!"
+LoadedMSG="RIF Renamer Loaded... Press OK Now !!!";
+setTimeout(poc,1500);
+}
+
+function load_permUart(){
+var script = document.createElement('script');script.src = "permanent-uart.js";document.getElementsByTagName('head')[0].appendChild(script);
+msgs.innerHTML="Loading Jailbreak + Permanent UART... Please Wait !!!"
+LoadedMSG="Permanent UART Loaded... Press OK Now !!!";
+setTimeout(poc,1500);
+}
+
+function load_fanthreshold(){
+var script = document.createElement('script');script.src = "fan-threshold.js";document.getElementsByTagName('head')[0].appendChild(script);
+msgs.innerHTML="Loading Jailbreak + Fan Threshold... Please Wait !!!"
+LoadedMSG="Fan Threshold Loaded... Press OK Now !!!";
+setTimeout(poc,1500);
+}
+
+function load_linux(){
+var script = document.createElement('script');script.src = "LinuxLoader-900.js";document.getElementsByTagName('head')[0].appendChild(script);
+msgs.innerHTML="Loading Jailbreak + Linux Loader... Please Wait !!!";
+LoadedMSG="Linux Loader Loaded... Press OK Now !!!";
+setTimeout(poc,1500);
+}
+
+function load_linux1(){
+var script = document.createElement('script');script.src = "LinuxLoader-900-2gb.js";document.getElementsByTagName('head')[0].appendChild(script);
+msgs.innerHTML="Loading Jailbreak + Linux Loader... Please Wait !!!";
+LoadedMSG="Linux Loader -2gb Loaded... Press OK Now !!!";
+setTimeout(poc,1500);
+}
+
+function load_linux2(){
+var script = document.createElement('script');script.src = "LinuxLoader-900-3gb.js";document.getElementsByTagName('head')[0].appendChild(script);
+msgs.innerHTML="Loading Jailbreak + Linux Loader... Please Wait !!!";
+LoadedMSG="Linux Loader -3gb Loaded... Press OK Now !!!";
+setTimeout(poc,1500);
+}
+
+function load_linux3(){
+var script = document.createElement('script');script.src = "LinuxLoader-900-4gb.js";document.getElementsByTagName('head')[0].appendChild(script);
+msgs.innerHTML="Loading Jailbreak + Linux Loader... Please Wait !!!";
+LoadedMSG="Linux Loader -4gb Loaded... Press OK Now !!!";
+setTimeout(poc,1500);
+}
+
+function load_linux4(){
+var script = document.createElement('script');script.src = "LinuxLoader-900-5gb.js";document.getElementsByTagName('head')[0].appendChild(script);
+msgs.innerHTML="Loading Jailbreak + Linux Loader... Please Wait !!!";
+LoadedMSG="Linux Loader -5gb Loaded... Press OK Now !!!";
+setTimeout(poc,1500);
+}
+</script>
+<script type="text/javascript">
+ if(localStorage.getItem("theme")==null){
+   localStorage.setItem("theme","1.jpg")
+ }
+ document.body.style.background = "url('img/"+localStorage.getItem("theme")+"')"
+ document.body.style.backgroundSize = "cover"
+ var imgs = ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg"];
+ render()
+ function render(){
+     document.querySelector(".themes").innerHTML=""
+	 for(let i=0;i<imgs.length;i++){
+	    var selectText = "Select"
+	    var textColor = "white"
+	    if(localStorage.theme==imgs[i]){
+	      selectText="Selected"
+	      textColor="green"
+	    }
+	 	document.querySelector(".themes").innerHTML+='<div class="theme" ><img src="img/'+imgs[i]+'" ><span style="color:'+textColor+';" onclick="set('+i+')">'+selectText+'</span></div>';
+	 }
+ }
+ function set(i){
+    localStorage.setItem("theme",imgs[i])
+    render()
+ 	document.body.style.background = "url('img/"+imgs[i]+"')"
+ 	document.body.style.backgroundSize = "cover"
+ }
+</script>
+</body>
+</html>
